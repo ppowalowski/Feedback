@@ -1,0 +1,16 @@
+<!-- Feedback Overlay TRIGGER -->
+<a class="overlay-feedback-trigger" rel="#overlay-feedback"><?php echo $this->__('Leave a feedback') ?></a>
+<script type="text/javascript">
+jQuery(function($){
+    //al click sul link trigger
+    //apro l'overlay
+    $(".overlay-feedback-trigger").overlay({
+        top: 'center',
+        mask: {
+            color: '#000',
+            opacity: 0.5
+        },
+        closeOnClick: false
+    });
+});
+</script>

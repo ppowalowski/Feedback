@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>FancyFeedback</name>
+    <version>1.0.2.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>FancyFeedback allows the visitors on your site to leave you their precious feedbacks in a stylish way.</summary>
+    <description>FancyFeedback allows the visitors on your site to leave you their precious feedbacks in a stylish way.</description>
+    <notes>Advanced version released</notes>
+    <authors><author><name>Arvind Bhardwaj</name><user>Arvind07</user><email>bhardwajsonheight@gmail.com</email></author></authors>
+    <date>2013-04-26</date>
+    <time>10:02:45</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="WebspeaksFeedback_Fancyfeedback.xml" hash="257bf9c32ee26ef94a05e856846e998d"/></dir></target><target name="magelocal"><dir name="WebspeaksFeedback"><dir name="Fancyfeedback"><dir name="Block"><dir name="Adminhtml"><dir name="Fancyfeedback"><dir name="Edit"><file name="Form.php" hash="4b428d7015b1b30797cb238a48635e96"/><dir name="Tab"><file name="Form.php" hash="339e16730e24adbe7c507a532a76e973"/></dir><file name="Tabs.php" hash="343574517ed6498b3fd774e37856b4f7"/></dir><file name="Edit.php" hash="9f86528100061fd986763966d3bc0e75"/><file name="Grid.php" hash="f07777c76c889d5c323e7050b10d7bbb"/></dir><file name="Fancyfeedback.php" hash="cf620a2b1f3113946638c20fb6ad3e41"/></dir><file name="Fancyfeedback.php" hash="f7580cca69d51757a63605b64ab9df9e"/></dir><dir name="Helper"><file name="Data.php" hash="b740042b28249ba9ad094aec306a595e"/></dir><dir name="Model"><file name="Fancyfeedback.php" hash="5b7c332074e592ed84f4d1ecd43495e9"/><dir name="Mysql4"><dir name="Fancyfeedback"><file name="Collection.php" hash="c50573841e863124f474e492225cb11c"/></dir><file name="Fancyfeedback.php" hash="d941d2fa2dfcfc130ab198057ad2ed9d"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="FancyfeedbackController.php" hash="e642bdf0842e42461e61659946f3ab92"/><file name="FancyfeedbacksettingsController.php" hash="2d5ce7b4d6a5a96fa6b847ee78e1643b"/></dir><file name="IndexController.php" hash="883b771fad3617d81126076f602f9b16"/></dir><dir name="etc"><file name="adminhtml.xml" hash="f474b64ecee5a0c40deb8fae6a65b90e"/><file name="config.xml" hash="2ca76084b2a16d4448cab68e6594817c"/><file name="system.xml" hash="7dcf973cc6dc9c991c54802dd6a4a31e"/></dir><dir name="sql"><dir name="fancyfeedback_setup"><file name="mysql4-install-0.1.0.php" hash="26912548fc55ec16d36db173e62d7435"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="fancyfeedback.xml" hash="83b71fc6dc8b0b312c0b9e8e056b5bb0"/></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="fancyfeedback.xml" hash="ef125fecc3c76e0d964c0b53e0292e99"/></dir><dir name="template"><dir name="fancyfeedback"><file name="fancyfeedback.phtml" hash="b56d6ded1d62f6a6001687d096ad9385"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="fancyfeedback"><dir name="css"><file name="fancyfeedback.css" hash="34bd2f32f9e293145d30eb0e7031ae2d"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

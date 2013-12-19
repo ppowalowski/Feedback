@@ -1,0 +1,108 @@
+<!-- Feedback OVERLAY // START -->
+<div id="overlay-feedback" class="overlay-feedback clearfix cos_overlay">
+    <a class="close"></a>
+
+    <h1><?php echo $this->__('Leave a feedback') ?></h1>
+
+    <div>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label for="name" class="required"><em>*</em><?php echo $this->__('Name') ?>:</label>
+                    <div class="input-box">
+                        <input type="text" name="fdb_name" id="fdb_name" class="input-text required-entry" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="email" class="required"><em>*</em><?php echo $this->__('Email') ?>:</label>
+                    <div class="input-box">
+                        <input type="text" name="fdb_email" id="fdb_email" class="input-text required-entry validate-email" />
+                    </div>
+                </div>
+            </li>
+            <li class="wide">
+                <label for="comment" class="required"><em>*</em><?php echo $this->__('Message') ?>:</label>
+                <div class="input-box">
+                    <textarea rows="5" cols="16" name="fdb_msg" id="fdb_msg" class="required-entry input-text"></textarea>
+                    <input type="hidden" id="fdb_url" value="<?php echo Mage::getUrl().'fancyfeedback/'; ?>">
+                </div>
+            </li>
+        </ul>
+
+        <button id="fdb_submit_btn" type="submit" class="button"><span><span><?php echo $this->__('Submit') ?></span></span></button>
+
+        <div id="fdb_error"></div>
+
+    </div>
+</div>
+<!-- Feedback OVERLAY // END -->
+
+<script type="text/javascript">
+(function(){
+
+    document.getElementById('fdb_submit_btn').onclick = submitForm;
+
+    function submitForm(e) {
+        var path = document.getElementById('fdb_url').value;
+        var name = document.getElementById('fdb_name').value.trim();
+        var email = document.getElementById('fdb_email').value.trim();
+        var msg = document.getElementById('fdb_msg').value.trim();
+        if(name.length>0 && email.length>0 && msg.length>0) {
+            if(validate_email(email)) {
+                document.getElementById('fdb_submit_btn').setAttribute('disabled', 'disabled');
+                document.getElementById('fdb_error').innerHTML = '<?php echo $this->__('Submitting your feedback...') ?>';
+
+                var xhr;
+                    try {  xhr = new ActiveXObject('Msxml2.XMLHTTP');   }
+                    catch (e) {
+                        try {   xhr = new ActiveXObject('Microsoft.XMLHTTP');    }
+                        catch (e2) {
+                          try {  xhr = new XMLHttpRequest();     }
+                          catch (e3) {  xhr = false;   }
+                        }
+                    }
+
+                    xhr.onreadystatechange  = function() {
+                         if(xhr.readyState  == 4) {
+                              if(xhr.status  == 200) {
+                                document.getElementById('fdb_error').innerHTML = xhr.responseText;
+                              } else {
+                                document.getElementById('fdb_error').innerHTML = xhr.status;
+                              }
+                         }
+                    };
+                   xhr.open("POST", path+"?name="+name+"&email="+email+"&msg="+msg,  true);
+                   xhr.send(null);
+            } else {
+                document.getElementById('fdb_error').innerHTML = '<span style="color:red;"><?php echo $this->__('Your email seems to be invalid!') ?></span>';
+            }
+        } else {
+            document.getElementById('fdb_error').innerHTML = '<span style="color:red;"><?php echo $this->__('Please enter some thing.') ?></span>';
+            document.getElementById('fdb_submit_btn').removeAttribute('disabled');
+        }
+        return false;
+    }
+
+    function validate_email(str) {
+        return /^([\w-_.]+)(\.[\w-_.]+)*@([\w\-]+)(\.[\w]{2,7})(\.[a-z]{2})?$/i.test(str);
+    }
+})();
+
+jQuery(function($){
+    //apro automaticamente l'overlay
+    //se nella querystring è presente il parametro o=newsletter
+    //e se non è già stato inviato il form con successo
+    if (window.location.href.indexOf('o=feedback') >= 0) {
+        $("#overlay-feedback").overlay({
+            top: 'center',
+            mask: {
+                color: '#000',
+                opacity: 0.5
+            },
+            closeOnClick: false,
+            load: true
+        });
+    }
+});
+
+</script>

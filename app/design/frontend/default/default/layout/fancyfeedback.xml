@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss">
+				<stylesheet>fancyfeedback/css/fancyfeedback.css</stylesheet>
+			</action>
+		</reference>
+		<reference name="footer">
+			<block type="fancyfeedback/fancyfeedback" name="fancyfeedback" template="fancyfeedback/fancyfeedback_overlay.phtml" />
+		</reference>
+	</default>
+</layout>

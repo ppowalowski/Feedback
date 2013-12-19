@@ -1,2 +1,2 @@
-app  app
-skin  skin
+app/*  app
+skin/*  skin

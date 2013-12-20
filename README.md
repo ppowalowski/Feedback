@@ -1,7 +1,11 @@
 Feedback
 ========
 
-Magento Feedback Extension
+A Magento Extension to let your visitors leave a generic feedback about your website.
+You can add a "Leave a feedback" link wherever you want (es: footer) and it will open a modal overlay with the Ajax feedback form.
+Alternatively if "o=feedback" is added to the querystring, the overlay will show up as soon as the page is loaded.
+When the user sends the form you will receive an email containing his message.
+In Magento you will be able to see a list of the feedback left by users and reply them.
 
 How to Install:
 - Disable Compilation in Magento

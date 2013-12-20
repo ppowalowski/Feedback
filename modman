@@ -1,2 +1,11 @@
-app/*  app
-skin/*  skin
+app/code/local/WebspeaksFeedback/Fancyfeedback/  app/code/local/WebspeaksFeedback/Fancyfeedback/
+app/design/adminhtml/base/default/layout/* app/design/adminhtml/base/default/layout/
+app/design/frontend/base/default/layout/* app/design/frontend/base/default/layout/
+app/design/frontend/base/default/template/fancyfeedback/ app/design/frontend/base/default/template/fancyfeedback/
+app/etc/modules/* app/etc/modules/
+app/locale/en_US/* app/locale/en_US/
+app/locale/en_US/template/email/fancyfeedback/ app/locale/en_US/template/email/fancyfeedback/
+app/locale/en_US/WebspeaksFeedback_Fancyfeedback.csv app/locale/en_US/WebspeaksFeedback_Fancyfeedback.csv
+app/locale/it_IT/template/email/fancyfeedback/ app/locale/it_IT/template/email/fancyfeedback/
+app/locale/it_IT/WebspeaksFeedback_Fancyfeedback.csv app/locale/it_IT/WebspeaksFeedback_Fancyfeedback.csv
+skin/frontend/default/default/fancyfeedback/ skin/frontend/default/default/fancyfeedback/
